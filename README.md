@@ -7,11 +7,11 @@ i use react to coding this game with basic component :
 - Letters
 - Letter
 
-<div>
+<svg>
   <App>
     <Score /><Solution />
     <Letters><Letter></Letter><Letter></Letter>
       .... //Eventually we will display all the available letters here: A - Z
     </Letters>
   </App> 
-</div>
+</svg>
