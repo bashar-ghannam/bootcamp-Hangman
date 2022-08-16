@@ -1,5 +1,10 @@
+#root {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -35,4 +40,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.active {
+  text-decoration: line-through;
+  pointer-events: none;
+}
+
+.letters {
+  font-size: 16px;
+  letter-spacing: 5px;
 }
