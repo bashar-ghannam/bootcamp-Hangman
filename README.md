@@ -7,9 +7,9 @@ i use react to coding this game with basic component :
 - Letters
 - Letter
 
-<App>
+<!-- <App>
   <Score /><Solution />
   <Letters><Letter></Letter><Letter></Letter>
     .... //Eventually we will display all the available letters here: A - Z
   </Letters>
-</App>
+</App> -->
