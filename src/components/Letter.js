@@ -4,24 +4,26 @@ class Letter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      char: props.char,
-      IsSelected: false,
-      changeScore: props.changeScore,
+      className: '',
     };
   }
 
-  changeState = () => {
-    this.setState({ IsSelected: true });
-    this.state.changeScore(this.state.char);
+  setLetterClass = () => {
+    if (this.props.solution === false) {
+      this.props.selectLetter(this.props.letter);
+      let className = 'selected';
+      this.setState({ className: className });
+    }
   };
 
   render() {
     return (
-      <span
-        onClick={this.changeState}
-        className={this.state.IsSelected ? 'active' : ''}
-      >
-        {this.state.char}
+      <span onClick={this.setLetterClass} className={this.state.className}>
+        {this.props.solution
+          ? this.props.letterStatus[this.props.letter]
+            ? this.props.letter
+            : ' _ '
+          : this.props.letter}
       </span>
     );
   }

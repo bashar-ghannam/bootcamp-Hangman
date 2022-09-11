@@ -1,9 +1,15 @@
 #root {
-  margin-top: 20px;
-  margin-left: 20px;
+  position: relative;
 }
 
 .App {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  margin: auto;
   text-align: left;
 }
 
@@ -42,7 +48,7 @@
   }
 }
 
-.active {
+.selected {
   text-decoration: line-through;
   pointer-events: none;
 }
@@ -50,4 +56,16 @@
 .letters {
   font-size: 16px;
   letter-spacing: 5px;
+}
+
+.high-score {
+  color: rgb(28, 198, 28);
+}
+
+.medium-score {
+  color: rgb(255, 255, 0);
+}
+
+.low-score {
+  color: rgb(233, 75, 75);
 }

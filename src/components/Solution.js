@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import Letter from './Letter';
 
 class Solution extends Component {
   render() {
     return (
       <div>
-        {this.props.solution.map((e, index) => (
-          <span key={index}>{e}</span>
+        {this.props.solution.word.split('').map((letter, index) => (
+          <Letter
+            key={index}
+            letter={letter}
+            letterStatus={this.props.letterStatus}
+            solution={true}
+          />
         ))}
         <div>
-          <em>Hint : {this.props.hint}</em>
+          <em>Hint : {this.props.solution.hint}</em>
         </div>
       </div>
     );
